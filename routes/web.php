@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TableController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('tables', [TableController::class, 'getAllTables'])->name('tables');
+Route::get('active-tables', [TableController::class, 'getAllActiveTables'])->name('active-tables');
