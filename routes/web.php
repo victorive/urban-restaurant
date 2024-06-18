@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return redirect('tables');
 });
 
 Route::get('tables', [TableController::class, 'getAllTables'])->name('tables');
