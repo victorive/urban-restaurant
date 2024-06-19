@@ -52,7 +52,7 @@
                                 </td>
                                 <td class="pl-5">
                                     <button
-                                        class="py-3 px-3 text-sm focus:outline-none leading-none text-red-700 bg-red-100 rounded {{ $table->active? 'text-green-700 bg-green-100' : 'text-red-700 bg-red-100' }} ">
+                                        class="py-3 px-3 text-sm focus:outline-none leading-none rounded {{ $table->active? 'text-green-700 bg-green-100' : 'text-red-700 bg-red-100' }} ">
                                         {{ $table->active ? 'Yes' : 'No' }}
                                     </button>
                                 </td>
