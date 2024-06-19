@@ -39,7 +39,7 @@ the project’s root folder. eg.
 **Step 10:** Populate the database with initial data by running `php artisan db:seed`. 
 This will seed the tables, restaurants and dining areas with the provided data.
 
-**Step 11:** Run `npm run build` to compile your frontend assets.
+**Step 11:** Run `npm run dev` to compile your frontend assets.
 
 **Step 12:** Serve the application by running `php artisan serve`. This will start a development server,
 and you can access the application by visiting http://localhost:8000 or using the link generated in your web browser.
