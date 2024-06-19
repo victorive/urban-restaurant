@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\TableController;
+use App\Http\Controllers\RestaurantController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect('tables');
+    return redirect('/restaurants');
 });
 
-Route::get('tables', [TableController::class, 'getAllTables'])->name('tables');
-Route::get('active-tables', [TableController::class, 'getAllActiveTables'])->name('active-tables');
+Route::prefix('restaurants')->group(function () {
+
+    Route::get('/', [RestaurantController::class, 'getAllRestaurants']);
+    Route::get('{restaurant}/tables', [RestaurantController::class, 'getRestaurantsTables'])->name('restaurants.tables');
+    Route::get('{restaurant}/active-tables', [RestaurantController::class, 'getRestaurantsActiveTables'])->name('restaurants.active-tables');
+});

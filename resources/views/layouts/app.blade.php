@@ -12,6 +12,8 @@
 
 @yield('content')
 
+@yield('tables')
+
 @stack('scripts')
 
 </body>

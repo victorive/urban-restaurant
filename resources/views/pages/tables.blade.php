@@ -1,8 +1,23 @@
-@extends('index')
+@extends('layouts.app')
 @section('title', 'Tables')
 @section('tables')
+
+    @include('layouts.nav')
+
     <div class="sm:px-6 w-full">
         <div class="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10">
+            <a onclick="history.back()" class="cursor-pointer">
+                <svg class="mb-4" xmlns="http://www.w3.org/2000/svg" version="1.0" width="25.000000pt"
+                     height="25.000000pt" viewBox="0 0 50.000000 50.000000" preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                        <path
+                            d="M155 456 c-60 -28 -87 -56 -114 -116 -36 -79 -19 -183 42 -249 33 -36 115 -71 167 -71 52 0 134 35 167 71 34 37 63 110 63 159 0 52 -35 134 -71 167 -37 34 -110 63 -159 63 -27 0 -65 -10 -95 -24z m180 -15 c128 -58 164 -223 72 -328 -101 -115 -283 -88 -348 52 -79 171 104 354 276 276z"/>
+                        <path
+                            d="M160 295 l-44 -45 46 -47 c26 -26 51 -44 54 -40 4 4 -8 23 -26 42 l-34 35 112 0 c68 0 112 4 112 10 0 6 -44 10 -112 10 l-112 0 32 33 c18 18 32 36 32 40 0 16 -18 4 -60 -38z"/>
+                    </g>
+                </svg>
+            </a>
+
             <div class="mt-7 overflow-x-auto">
                 @if($tables->count())
                     <table class="w-full whitespace-nowrap">
